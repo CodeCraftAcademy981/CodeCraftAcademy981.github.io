@@ -367,8 +367,8 @@ body{
     
     color:white;
 
-    font-size:2vw;
-    width:50ch;
+    font-size:20px;
+    width:50vw;
     font-family: 'Bebas Neue', sans-serif;
     display: grid;
     place-items: center;
@@ -402,9 +402,9 @@ body{
 .box .our-experience h2{
     color:white;
 
-    font-size:2vw;
-    padding-left: 60%;
-    width:50ch;
+    font-size:20px;
+    padding-left: 50%;
+    width:50vw;
     font-family: 'Bebas Neue', sans-serif;
     text-align: right;
     display: grid;
