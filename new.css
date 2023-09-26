@@ -323,9 +323,7 @@ body{
 }
 
 .box{
-    padding-left:10vw;
-    padding-right:10vw;
-    height:-100vh;
+    padding: 10vw;
     box-shadow: 0 0 50px 15px yellowgreen;
     background-color: rgba(0, 0, 0, 0.897);
 }
@@ -339,21 +337,21 @@ body{
 }
 
 .box .why-us h2{
-    font-size:50px;
+    font-size:10vw;
     font-family: 'Bebas Neue', sans-serif;
     text-align: left;
 }
 
 .box .why-us-desc{
 
-    padding-top:10vw;
+    padding-top: 5vw;
 
     
 }
 
 .writing1{
     color:yellowgreen;
-    font-size: 20px;
+    font-size: 5vw;
     font-family: 'Bebas Neue', sans-serif;
     display: grid;
     place-items: center;
@@ -368,8 +366,9 @@ body{
 .writing2{
     
     color:white;
-    font-size:20px;
-    width:40vw;
+
+    font-size:2vw;
+    width:50ch;
     font-family: 'Bebas Neue', sans-serif;
     display: grid;
     place-items: center;
@@ -389,10 +388,11 @@ body{
 
 .box .our-experience h1{
     color:yellowgreen;
-    font-size:20px;
+    font-size:4vw;
     font-family: 'Bebas Neue', sans-serif;
     width:50ch;
     display: grid;
+    padding-left:20%;
     place-items: end;
     text-align: right;
     align-content: center;
@@ -402,16 +402,15 @@ body{
 .box .our-experience h2{
     color:white;
 
-    font-size:20px;
-    padding-left: 50vw;
-    width:40vw;
+    font-size:2vw;
+    padding-left: 60%;
+    width:50ch;
     font-family: 'Bebas Neue', sans-serif;
     text-align: right;
     display: grid;
     place-items: center;
     align-content: center;
 }
-
 
 
 .description{
