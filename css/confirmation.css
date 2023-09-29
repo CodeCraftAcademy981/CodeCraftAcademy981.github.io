@@ -1,6 +1,6 @@
 *{
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 50px;
+   
 }
 header{
     position:fixed;
@@ -38,16 +38,45 @@ ul li{
     padding-left: 3%;
 }
 
-
+body{
+    background-color: rgba(128, 128, 128, 0.281);
+}
 .confirm{
     color:white;
+    font-size: 50px;
+    padding-left:5rem;
+    padding-right:5rem;
     padding-top:10rem;
-    padding-bottom:10rem;
-    display: grid;
+    padding-bottom:2rem;
     place-items: center;
     align-content: center;
     background-color: rgba(128, 128, 128, 0.281);
 
     text-align: center;
 
+}
+
+.contacts{
+    place-items: center;
+    align-content: center;
+    color:white;
+    padding-left:20vw;
+    font-size:20px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.contacts .item{
+    padding-right:15vw;
+    font-size:20px;
+    
+}
+.contacts .item1{
+    padding-right:15vw;
+    font-size:20px;
+
+}
+.contacts .item2{
+    font-size:20px;
 }
