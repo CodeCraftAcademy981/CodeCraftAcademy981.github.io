@@ -17,10 +17,32 @@
         <li><a class = "navigate" href = "contactus.html">Contact Us</a></li>
        </ul>
     </header>
+    <script type = "text/javascript">
+        window.addEventListener("scroll", function(){
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY>0);
+        })
+      </script>
  
    <div class="confirm">
     <h2>Congrats! You have signed up to CodeCraft Academy's free tutoring. Sessions are on Wednesdays at 6:00pm and Saturdays at 10:00am PST. Below you will find the links to our google meet, our youtube channel for missed classes, and our email. Please feel free to email us with any questions that you have. Thank you for signing up.</h2>
    </div>
+   <div class = "contacts">
+            <div class = "item">
+                <a href='https://classroom.google.com/c/NjIyMzA1NTM1OTAx?cjc=hltyhr5'><img src="images/classroom.png" width="120px" height="100px"></a>
+                <h2>Join our classroom!</h2>
+            </div>
+                <div class = "item1">
+                <a href='https://www.youtube.com/@CodeCraftAcademy981'><img src="images/youtube.png" width="100px" height="100px"></a>
+                <h2>Youtube: CodeCraft Academy</h2>
+            </div>
+                <div class = "item2">
+                <a href="https://mail.google.com"><img src="images/mail.png" width="150px" height="100px"></a>
+                <h2>Email: codecraftacademy981@gmail.com</h2>
+            </div>
+     
+    </div>
+
    
    <script>
     document.body.style.zoom = "75%";
