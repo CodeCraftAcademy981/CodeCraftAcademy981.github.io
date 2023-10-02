@@ -6,7 +6,7 @@ html {
   font-family:"Bebas Neue", sans-serif;
 }
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
 }
   
   /* Track */
@@ -21,7 +21,7 @@ html {
   
   /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: yellowgreen;
 }
 .AREA-with-backimage{
     background-image:url(images/back-3.jpg);
@@ -41,6 +41,7 @@ html {
 header{
   z-index:10000000000;
   background-color: black;
+  width:100%;
 }
 .navbar {
     display: flex;
@@ -143,10 +144,7 @@ header{
 }
 
 
-header .sticky{
-   padding:5px 100px;
-   background-color: black;
-}
+
 
 
 
@@ -501,7 +499,7 @@ header{
 
 header.sticky{
     padding:5px 100px;
-    background-color:rgba(128, 128, 128);
+    background-color:yellowgreen;
   z-index: 1000000000;
 }
 header ul{
