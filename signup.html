@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodeCraft Academy</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <script src="signup.js"></script>
-
-    <script
+<link rel="stylesheet" href="form.css">
+<link rel="stylesheet" href="new.css">
+<script src="form.js"></script>
+<script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
@@ -21,92 +9,74 @@
       (function () {
         emailjs.init("Pi2KUUo2bsszJifN2");
       })();
-    </script>
-    <link rel="stylesheet" href="new.css">
-     <link rel="stylesheet" href="signup.css">
-     
-  </head>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
- 
-  <body>
-    <header> <ul>
-      <li><a class = "navigate" href = "index.html">Home</a></li> 
-      <li><a class = "navigate" href = "signup.html">Sign Up</a></li>
-      <li><a class = "navigate" href = "learn_more.html">Curriculum</a></li>
-      <li><a class = "navigate" href = "aboutus.html">About Us</a></li>
-      <li><a class = "navigate" href = "contactus.html">Contact Us</a></li>
-     </ul></header>
-     
-  
-  
-    
- 
-    <div class="container">
-      <div>
-       
-        <div>
-          <h1 class = "Sign-up-title">Sign Up</h1>
-          <div class="form-group">
-            <h5 for="name">Name</h5>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              required
-              placeholder="Enter name"
-            />
-          </div>
-          <div class="form-group">
-            <h5 for="email">Email</h5>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              required
-              placeholder="Enter email"
-            />
-          </div>
-
-          <div class="form-group">
-            <h5 for="parent-email">Parent Email</h5>
-            <input
-              type="email"
-              class="form-control"
-              id="parent-email"
-              required
-              placeholder="Parent Email"
-            />
-          </div>
-
-
-          <div class="form-group">
-            <h5 for="message">Age</h5>
-            <input
-               type = "number"
-               class = 'form-control'
-               id="age"
-               required
-               placeholder="Enter Age"
-               />
-          </div>
-
-          
-         <button class = "form-button" onclick = "sendMail()" onclick = "cont">Submit</button>
-        </div>
-      </div>
-    
-    </div>
-
-    <script>
+      window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY>0);
+      })
       document.body.style.zoom = "75%";
     </script>
-  </body>
+    <header> 
+      <nav class="navbar">
+        <div class="brand-title">
+          <a href="index.html"><img src="images/logo.png" width="70px" height="70px"></a> 
+
+          
+        </div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="learn_more.html">Curriculum</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="signup.html">Signup</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+<body>
+<div class="container right-panel-active">
+	<!-- Sign Up -->
+	<div class="container__form container--signup">
+		<form action="#" class="form" id="form1">
+			<h2 class="form__title">Sign Up</h2>
+			<input type="text" placeholder="Name" id="name" required class="input" />
+			<input type="email" placeholder="Email" id="email" required class="input" />
+			<input type="number" placeholder="Age" id="age" required class="input" />
+      <input type="email" placeholder="Parent Email" id="parent-email" required class="input"/>
+      <button class = "btn" onclick = "sendMail()" onclick = "cont">Submit</button>
+		</form>
+	</div>
+  <!-- Sign In -->
+	<div class="container__form container--signin">
+		<form action="#" class="form" id="form2">
+			<h2 class="form__title">Sign In</h2>
+			<input type="email" placeholder="Email" class="input" />
+			<input type="password" placeholder="Password" class="input" />
+			<a href="#" class="link">Forgot your password?</a>
+			<button class="btn">Sign In</button>
+		</form>
+	</div>
+
+	<!-- Overlay -->
+	<div class="container__overlay">
+		<div class="overlay">
+			<div class="overlay__panel overlay--left">
+				<button class="btn" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay__panel overlay--right">
+				<button class="btn" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
 </div>
-</html>
+</body>
+
+
+
+
+
