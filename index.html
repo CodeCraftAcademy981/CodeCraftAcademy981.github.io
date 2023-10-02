@@ -7,36 +7,42 @@
     <link rel="stylesheet" href="new.css">
     <script defer src = "home.js"></script>
 </head>
+
 <body>
+  
   <header>
-  <nav class="navbar">
-        <div class="brand-title">
-          <a href="index.html"><img src="images/logo.png" width="70px" height="70px"></a> 
-      <h2>CodeCraft Academy</h2>
-          
-          
-        </div>
-        <a href="#" class="toggle-button">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="learn_more.html">Curriculum</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="contactus.html">Contact</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-   
+    <nav class="navbar">
+          <div class="brand-title">
+            <a href="index.html"><img src="images/logo.png" width="70px" height="70px"></a> 
+        <h2>CodeCraft Academy</h2>
+            
+            
+          </div>
+          <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+          <div class="navbar-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="learn_more.html">Curriculum</a></li>
+              <li><a href="aboutus.html">About</a></li>
+              <li><a href="contactus.html">Contact</a></li>
+              <li><a href="signup.html">Signup</a></li>
+            </ul>
+          </div>
+        </nav>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+      </header>
 
    <script type = "text/javascript">
-      var header = document.querySelector("header");
-      header.classList.toggle("sticky");
+      window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY>0);
+      })
+      document.body.style.zoom = "75%";
   </script>
 <div class= "AREA-with-backimage">
     <div class = "title-of-page">
