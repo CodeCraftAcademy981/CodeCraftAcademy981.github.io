@@ -321,3 +321,39 @@ body {
 	}
 }
 
+header{
+    position:fixed;
+    top:0;
+    width:90%;
+    padding: 40px 100px;
+    transition: 2s;
+
+  
+}
+
+header.sticky{
+    padding:5px 100px;
+    background-color:yellowgreen;
+  z-index: 1000000000;
+}
+header ul{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    
+    display: flex;
+
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-decoration: overline;
+    color: rgb(255, 255, 255);
+    font-size:x-large;
+    animation-name: grow;
+    animation-duration: 0.1s;
+    transition: all 1s;
+    padding-left: 3%;
+}
