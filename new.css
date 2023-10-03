@@ -169,7 +169,7 @@ body{
 
 
     text-decoration: overline;
-    font-size: 80px;
+    font-size: 7vw;
     font-family: 'Bebas Neue', sans-serif;
     animation-name: fade-in;
     animation-duration: 1.5s;
@@ -312,7 +312,8 @@ body{
 
 
 .background-3{
-    padding:5vw;
+    padding-top:10%;
+    padding-bottom:10%;
     background-color: rgba(128, 128, 128, 0.281);
     display: grid;
     place-items: center;
@@ -436,35 +437,29 @@ body{
     font-size: 2vw;
     font-family: 'Times New Roman', sans-serif
 }
-.description .contacts{
-    padding-left: 6vw;
-    display: flex;
+.contacts{
+    place-items: center;
+    align-content: center;
+    color:white;
+    font-size:20px;
+    text-align: center;
+    display: grid;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.description .contacts img{
-    padding-left:10vw;
+.contacts .item{
+    padding-top:5vh;
+    font-size:20px;
+    
 }
+.contacts .item1{
+    padding-top:5vw;
+    font-size:20px;
 
-
-.description .contacts .item1 img{
-    padding-left: 5vw;
 }
-.description .contacts .item2 img{
-    padding-left: 6vw;
-}
-.description .contacts .item{
-    padding-right:15vw;
-}
-.description .contacts .item1{
-    padding-right:15vw;
-}
-.description .contacts .item2{
-    padding-right:15vw;
-}
-
-.description h3{
-    padding-right:3vw;
+.contacts .item2{
+    padding-top:5vw;
+    font-size:20px;
 }
 
 @keyframes slide-up{
