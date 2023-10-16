@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="form.css">
+<link rel="stylesheet" href="new.css">
 <script src="form.js"></script>
 <script
       type="text/javascript"
@@ -42,11 +43,11 @@
 	<!-- Sign Up -->
 	<div class="container__form container--signup">
 		<form action="#" class="form" id="form1">
-			<h2 class="form__title">Sign Up</h2>
+			<h1 class="form__title">Sign Up</h1>
 			<input type="text" placeholder="Name" id="name" required class="input" />
-			<input type="email" placeholder="Email" id="email" required class="input" />
-			<input type="number" placeholder="Age" id="age" required class="input" />
-      <input type="email" placeholder="Parent Email" id="parent-email" required class="input"/>
+			<input type="email" placeholder="Reachable Email" id="email" required class="input" />
+			<input type="text" placeholder="Phone | Format: (xxx)-xxx-xxxx" id="age" required class="input" />
+      <input type="date" placeholder="Class" id="parent-email" required class="input"/>
       <button class = "btn" onclick = "sendMail()" onclick = "cont">Submit</button>
 		</form>
 	</div>
@@ -64,9 +65,6 @@
 	<!-- Overlay -->
 	<div class="container__overlay">
 		<div class="overlay">
-			<div class="overlay__panel overlay--left">
-				<button class="btn" id="signIn">Sign In</button>
-			</div>
 			<div class="overlay__panel overlay--right">
 				<button class="btn" id="signUp">Sign Up</button>
 			</div>
