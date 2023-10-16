@@ -1,7 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+*{
+  font-family:"Bebas Neue", sans-serif;
+  font-size:18px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: yellowgreen;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: yellowgreen;
+}
+.AREA-with-backimage{
+    background-image:url(images/back-3.jpg);
+    background-size: cover;
+    image-rendering: crisp-edges;
+    background-position: 50% 50%;
+    height: 100%;
+    image-rendering: -moz-crisp-edges;          /* Firefox */
+    image-rendering: -o-crisp-edges;            /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+    -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+    image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+
+}
+
 header{
-    z-index:10000000000;
-    background-color: black;
-  }
+  z-index:10000000000;
+  background-color: black;
+  width:100%;
+}
 .navbar {
     display: flex;
     position: relative;
@@ -12,8 +54,8 @@ header{
 
 }
 .navbar h2{
-    float:right;
-    padding-bottom:2vw;
+  float:right;
+  padding-bottom:2vw;
 
 }
 .brand-title a{
@@ -102,10 +144,16 @@ header{
     }
 }
 
+
+
+
+
+
 @keyframes grow{
     from{width: 50px; height:50px;bottom:0;}
     to{width: 200px; height:50px;bottom:0;}
 }
+
 
 :root {
 	/* COLORS */
@@ -127,6 +175,7 @@ header{
 }
 
 body {
+	padding-top:100px;
 	align-items: center;
 	background-color: var(--white);
 	background: url("images/back-3.jpg");
