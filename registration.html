@@ -2,22 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="aboutus.css">
-    <script defer src="home.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCraft Academy</title>
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="registration.css">
+    <script defer src = "home.js"></script>
 </head>
-<!-- ============================================ -->
-<!--                 Navigation                   -->
-<!-- ============================================ -->
-
-<body>
 <header id="navigation">
     <div class="container">
         <!--Nav Logo-->
         <!--Logo is turned white in the css with a filter on dark mode-->
         <a href="" class="logo" aria-label="back to home">
-            <img src="logo.png" alt="logo" width="2vw" height="2vw" aria-hidden="true" decoding="async">
+            <img src="logo.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
         </a>
         <!--Navigation List-->
         <nav class="nav" role="navigation">
@@ -92,57 +88,64 @@
         </button> -->
     </div>
 </header>
-
-
 <!-- ============================================ -->
-<!--                Meet The Team                 -->
+<!--                   Contact                    -->
 <!-- ============================================ -->
 
-<section id="meet-us-1021">
+<section id="contact-1150">
     <div class="container">
         <div class="content">
-            <img class="graphic" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/Ornament.svg" alt="chef" width="456" height="31">
-            <h2 class="title">Meet Our Team</h2>
-            <p class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-            </p>
+            <span class="topper">Register</span>
+            <h2 class="title">Thanks for registering!</h2>
         </div>
-        <ul class="card-group">
-            <li class="item">
-                <picture class="picture">
-                    <source media="(max-width: 767px)" srcset="Hruday.png">
-                    <source media="(min-width: 768px)" srcset="Hruday.png">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="Hruday.png" alt="chef" width="305" height="335">
-                </picture>
-                <div class="info">
-                    <span class="name">Hruday Nara</span>
-                    <span class="job">Founder</span>
-                </div>
-            </li>
-            <li class="item">
-                <picture class="picture">
-                    <source media="(max-width: 767px)" srcset="Ray.png">
-                    <source media="(min-width: 768px)" srcset="Ray.png">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="Ray.png" alt="chef" width="305" height="335">
-                </picture>
-                <div class="info">
-                    <span class="name">Ray Pi</span>
-                    <span class="job">Founder</span>
-                </div>
-            </li>
-            <li class="item">
-                <picture class="picture">
-                    <source media="(max-width: 767px)" srcset="Shivank.jpg">
-                    <source media="(min-width: 768px)" srcset="Shivank.jpg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="Shivank.jpg" alt="chef" width="305" height="335">
-                </picture>
-                <div class="info">
-                    <span class="name">Shivank Singh</span>
-                    <span class="job">Founder</span>
-                </div>
-            </li>
-        </ul>
+        <div class="contact-group">
+            <picture class="picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="background.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="background.jpg">
+                <img loading="lazy" decoding="async" src="background.jpg" alt="people" width="630" height="300">
+            </picture>
+            <p class="contact-text">
+                
+            </p>
+            <ul class="ul">
+                <li class="li">
+                    <picture class="icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-phone.svg" alt="phone icon" class="icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="flex-group">
+                        <span class="header">Phone</span>
+                        <a href="tel:669-336-1777
+                        " class="link">+1 (669) 336 1777
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Form-->
+        <form class="form" id="form-1150" name="Contact Form" method="post">
+            <label class="label">
+                Name
+                <input class="input" required type="text" id="name-1150" name="name" placeholder="Name">
+            </label>
+            <label class="label email">
+                Email
+                <input class="input" required type="email" id="email-1150" name="email" placeholder="Email">
+            </label>
+            <label class="label phone">
+                Phone
+                <input class="input" required type="number" id="phone-1150" name="phone" placeholder="Phone">
+            </label>
+            <label class="label">
+                Message
+                <textarea class="input textarea" required name="Message" id="message-1150" placeholder="Write message..."></textarea>
+            </label>
+            <button class="button-solid submit" type="submit">Make an Appointment</button>
+        </form>
+        <!--Bounce Graphic-->
+        <img class="graphic graphic1" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/bounce.svg" alt="bounce" width="208" height="124">
+        <!--Coin Graphic-->
+        <img class="graphic graphic2" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/coin.svg" alt="bounce" width="205" height="161">
     </div>
 </section>
-</body>
-</html>

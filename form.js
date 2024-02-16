@@ -1,66 +1,34 @@
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
-const signInBtn = document.getElementById("signIn");
-const signUpBtn = document.getElementById("signUp");
-const fistForm = document.getElementById("form1");
-const secondForm = document.getElementById("form2");
-const container = document.querySelector(".container");
+const contactForm = document.querySelector("#form-242")
+const submitButton = document.querySelector(".button-solid submit")
+const nameInput = document.querySelector("#name-242")
+const emailInput = document.querySelector("#email-242")
+const phoneInput = document.querySelector("#phone-242")
+const messageInput = document.querySelector("#message-242")
 
-signInBtn.addEventListener("click", () => {
-	container.classList.remove("right-panel-active");
-});
+const publicKey = "3HNRHci98alqxxXVv"
+const serviceID = "service_7fhupfk"
+const templateID = "template_0s0fof4"
 
-signUpBtn.addEventListener("click", () => {
-	container.classList.add("right-panel-active");
-});
+emailjs.init(publicKey);
 
-fistForm.addEventListener("submit", (e) => e.preventDefault());
-secondForm.addEventListener("submit", (e) => e.preventDefault());
+contactForm.addEventListener("submit", (e) => e.preventDefault());
 
+const inputFields = {
+  name: nameInput.value,
+  email: emailInput.value,
+  phone: phoneInput.value,
+  message: messageInput.value,
+};
 
-
-function checkforblank(){
- 
-
-}
-function sendMail() {
-  var em1 = document.getElementById('email');
-  var em2 = document.getElementById('parent-email');
-  if(document.getElementById('name').value == ""||
-  document.getElementById('email').value == ""||
-  document.getElementById('age').value == ""||
-  document.getElementById('parent-email').value == ""){
-    alert("Please fill out the form properly")
-  }
-  else{
-    var params = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      age: document.getElementById("age").value,
-      email2: document.getElementById("parent-email").value,
-    };
-  
-    const serviceID = "service_2o2ptvd";
-    const templateID = "template_23d2mbc";
+emailjs.send(serviceID, templateID, params)
+        .then(res=>{
+            nameInput.value = "";
+            emailInput.value = "";
+            phoneInput.value = "";
+            messageInput.value ="";
+            console.log(res);
+            alert("You Have signed up to CodeCraftAcademy successfully!")
     
-
-      emailjs.send(serviceID, templateID, params)
-      .then(res=>{
-          document.getElementById("name").value = "";
-          document.getElementById("email").value = "";
-          document.getElementById("age").value = "";
-          document.getElementById("parent-email").value = "";
-          console.log(res);
-          window.open("confirmation.html");
-          alert("You Have signed up to CodeCraftAcademy successfully!")
-  
-      })
-      .catch(err=>console.log(err));
-      
-  }
-   
-  
-}
-
-    
+        })
+        .catch(err=>console.log(err));

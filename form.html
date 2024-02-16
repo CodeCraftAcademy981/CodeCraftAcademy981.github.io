@@ -2,22 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="aboutus.css">
-    <script defer src="home.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCraft Academy</title>
+    <script defer src = "home.js"></script>
+    <script src="form.js"></script>
 </head>
-<!-- ============================================ -->
-<!--                 Navigation                   -->
-<!-- ============================================ -->
-
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("Pi2KUUo2bsszJifN2");
+      })();
+    </script>
 <body>
-<header id="navigation">
+  <header id="navigation">
     <div class="container">
         <!--Nav Logo-->
         <!--Logo is turned white in the css with a filter on dark mode-->
         <a href="" class="logo" aria-label="back to home">
-            <img src="logo.png" alt="logo" width="2vw" height="2vw" aria-hidden="true" decoding="async">
+            <img src="logo.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
         </a>
         <!--Navigation List-->
         <nav class="nav" role="navigation">
@@ -93,56 +98,81 @@
     </div>
 </header>
 
-
 <!-- ============================================ -->
-<!--                Meet The Team                 -->
+<!--                Contact Form                  -->
 <!-- ============================================ -->
-
-<section id="meet-us-1021">
+<link rel="stylesheet" href="form.css">
+<section id="contact-242">
     <div class="container">
         <div class="content">
-            <img class="graphic" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/Ornament.svg" alt="chef" width="456" height="31">
-            <h2 class="title">Meet Our Team</h2>
+            <span class="topper">Here To Help</span>
+            <h2 class="title">Contact Us</h2>
             <p class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                You can contact us below through the form, our email, or the phone number provided. If you are interested in signing up directly, please visit our registration page under the "Classes" tab.
             </p>
         </div>
-        <ul class="card-group">
-            <li class="item">
-                <picture class="picture">
-                    <source media="(max-width: 767px)" srcset="Hruday.png">
-                    <source media="(min-width: 768px)" srcset="Hruday.png">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="Hruday.png" alt="chef" width="305" height="335">
-                </picture>
-                <div class="info">
-                    <span class="name">Hruday Nara</span>
-                    <span class="job">Founder</span>
-                </div>
-            </li>
-            <li class="item">
-                <picture class="picture">
-                    <source media="(max-width: 767px)" srcset="Ray.png">
-                    <source media="(min-width: 768px)" srcset="Ray.png">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="Ray.png" alt="chef" width="305" height="335">
-                </picture>
-                <div class="info">
-                    <span class="name">Ray Pi</span>
-                    <span class="job">Founder</span>
-                </div>
-            </li>
-            <li class="item">
-                <picture class="picture">
-                    <source media="(max-width: 767px)" srcset="Shivank.jpg">
-                    <source media="(min-width: 768px)" srcset="Shivank.jpg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="Shivank.jpg" alt="chef" width="305" height="335">
-                </picture>
-                <div class="info">
-                    <span class="name">Shivank Singh</span>
-                    <span class="job">Founder</span>
-                </div>
-            </li>
-        </ul>
+        <!-- Form -->
+        <form id="form-242" name="Contact Form" method="post">
+            <label for="name-242" class="label">
+                Name
+                <input class="input" required type="text" id="name-242" name="name" placeholder="John/Jane Doe">
+            </label>
+            <label for="email-242" class="label">
+                Email
+                <input class="input" required type="text" id="email-242" name="email" placeholder="name@company.com">
+            </label>
+            <label for="phone-242" class="label">
+                Phone
+                <input class="input" required type="text" id="phone-242" name="phone" placeholder="+1 (206) 987-6543">
+            </label>
+            <label class="label">
+                How Did You Find Us
+                <input class="input" type="text" id="find-242" name="find-us" placeholder="Social Media, Family, Friend...">
+            </label>
+            <label for="message-242" class="label label-message">
+                Question
+                <textarea class="input textarea" required name="Message" id="message-242" placeholder="Hello, I’m interested in..."></textarea>
+            </label>
+            <button class="button-solid submit" type="submit">Submit Message Now</button>
+        </form>
+        <!-- Contact Info -->
+        <div class="right-section">
+            <ul class="ul">
+                <li class="li">
+                    <picture class="icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/mail.svg" alt="mail icon" class="icon" width="36" height="36" decoding="async">
+                    </picture>
+                    <div class="flex-group">
+                        <span class="header">Email</span>
+                        <a href="mailto:codecraftacademy981@gmail.com" class="link">codecraftacademy981@gmail.com</a>
+                    </div>
+                </li>
+                <li class="li">
+                    <picture class="icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone.svg" alt="phone icon" class="icon" width="36" height="36" decoding="async">
+                    </picture>
+                    <div class="flex-group">
+                        <span class="header">Phone</span>
+                        <a href="tel:669-336-1777" class="link">(669) 336-1777</a>
+                    </div>
+                </li>
+                <li class="li">
+                    <picture class="icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin.svg" alt="address icon" class="icon" width="36" height="36" decoding="async">
+                    </picture>
+                    <div class="flex-group">
+                        <span class="header">Address</span>
+                        <a href="" class="link"><span class="block">Our classes are online!</span></a>
+                    </div>
+                </li>
+            </ul>
+            <!-- Picture -->
+            <picture class="picture">
+                <source media="(max-width: 600px)" srcset="online.jpg">
+                <source media="(min-width: 601px)" srcset="online.jpg">
+                <img class="img" aria-hidden="true" loading="lazy" decoding="async" src="online.jpg" alt="google map" width="462" height="438">
+            </picture>
+        </div>
     </div>
 </section>
-</body>
-</html>
+                             

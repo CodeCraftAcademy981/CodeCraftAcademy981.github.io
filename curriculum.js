@@ -45,4 +45,3 @@ const dropDowns = Array.from(document.querySelectorAll('#navigation .dropdown'))
     }
     item.addEventListener('click', onClick)
     }
-                            

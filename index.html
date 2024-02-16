@@ -7,103 +7,443 @@
     <link rel="stylesheet" href="new.css">
     <script defer src = "home.js"></script>
 </head>
-
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+</style>
 <body>
-  
-  <header>
-    <nav class="navbar">
-          <div class="brand-title">
-            <a href="index.html"><img src="images/logo.png" width="70px" height="70px"></a> 
-        <h2>CodeCraft Academy</h2>
-            
-            
-          </div>
-          <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </a>
-          <div class="navbar-links">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="learn_more.html">Curriculum</a></li>
-              <li><a href="aboutus.html">About</a></li>
-              <li><a href="contactus.html">Contact</a></li>
-              <li><a href="signup.html?#">Signup</a></li>
-            </ul>
-          </div>
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="navigation">
+    <div class="container">
+        <!--Nav Logo-->
+        <!--Logo is turned white in the css with a filter on dark mode-->
+        <a href="" class="logo" aria-label="back to home">
+            <img src="logo.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+        </a>
+        <!--Navigation List-->
+        <nav class="nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="toggle" aria-label="mobile menu toggle">
+                <div class="box" aria-hidden="true">
+                    <span class="line line1" aria-hidden="true"></span>
+                    <span class="line line2" aria-hidden="true"></span>
+                    <span class="line line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="ul-wrapper">
+                <ul id="expanded" class="ul" aria-expanded="false">
+                    <li class="li">
+                        <a href="index.html" class="li-link active">
+                            Home
+                        </a>
+                    </li>
+                    <li class="li">
+                        <a href="aboutus.html" class="li-link">
+                            About
+                        </a>
+                    </li>
+                    <!--Copy and paste this dropdown list item and replace any .li with this dropdown group to make a new dropdown and it will work-->
+                    <li class="li dropdown" tabindex="0">
+                        <span class="li-link">
+                            Classes
+                            <img class="drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="drop-ul">
+                            <li class="drop-li">
+                                <a href="registration.html" class="li-link drop-link">Registration</a>
+                            </li>
+                            <li class="drop-li">
+                                <a href="curriculum.html" class="li-link drop-link">Our Curriculum</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="li">
+                        <a href="form.html" class="li-link">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-      </header>
-
-   <script type = "text/javascript">
-      window.addEventListener("scroll", function(){
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY>0);
-      })
-      document.body.style.zoom = "75%";
-  </script>
-<div class= "AREA-with-backimage">
-    <div class = "title-of-page">
-        <h1 class = "Learns">CodeCraft Academy</h1>
-       </div>
-    
-       <div class = "desc-under-title">
-        <h1>A group of seasoned programmers teaching your children how to code, for free</h1>
-        <div class = "contact-button">
-            <a class = "link-contact" href = "signup.html">Sign Up Now</a>
+        <div class="contact-group">
+            <a href="tel:+16693361777" class="phone">
+                <img class="phone-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg" alt="logo" width="24" height="24" aria-hidden="true" decoding="async">
+                +16693361777
+            </a>
+            <div class="social">
+                <a href="" class="social-link">
+                    <img class="social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="social-link">
+                    <img class="social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="social-link">
+                    <img class="social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="social-link">
+                    <img class="social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+            </div>
         </div>
-       </div>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
+    </div>
+</header>
+                                
 
 
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-229">
+    <div class="container">
+        <div class="flex-group">
+            <span class="topper">Free Python Coding Classes</span>
+            <h1 class="title">CODECRAFT ACADEMY</h1>
+            <p class="text">
+                Give your child an experience they will never forget!
+            </p>
+            <a href="form.html" class="button-solid">Contact Us</a>
+            <a href="#middle" class="button-transparent">
+                Learn More
+            </a>
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="picture">
+        <source media="(max-width: 600px)" srcset="background.jpg">
+        <source media="(min-width: 601px)" srcset="background.jpg">
+        <img loading="lazy" decoding="async" src="background.jpg" alt="mountains" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+                                
+<!-- ============================================ -->
+<!--              Side By Side Reverse            -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-248">
+    <div class="container">
+        <!-- Left Image Section -->
+        <picture class="picture">
+            <source media="(max-width: 600px)" srcset="coding.jpg">
+            <source media="(min-width: 601px)" srcset="coding.jpg">
+            <img loading="lazy" decoding="async" src="coding.jpg" alt="hiker" width="434" height="434" aria-hidden="true">
+        </picture>
+        <!-- Right Content Section-->
+        <div class="content">
+            <span class="topper">CodeCraft Academy</span>
+            <h2 class="title">Free Python Coding Class</h2>
+            <p class="text">
+                In today's ever-evolving society, proficiency in computer programming is no longer just a valuable skill; it is a necessity. Python, as a versatile and user-friendly programming language, offers an exceptional foundation for your children to not only grasp the fundamentals of coding but also to develop problem-solving abilities, logical thinking, and creativity. Contact us below to have your child embark on their journey to becoming experienced programmers. Trust us, we won't let you down.
+            </p>
+            <a class="button-solid" aria-label="learn more about our programs" href="">Learn More</a>
+        </div>
+        <!-- Creates the faded lines on tablet -->
+        <span aria-hidden="true" class="lines"></span>
+    </div>
+    <!-- Background Image -->
+    <picture class="background">
+        <source media="(max-width: 600px)" srcset="back-2.jpg">
+        <source media="(min-width: 601px)" srcset="back-2.jpg">
+        <img loading="lazy" decoding="async" src="back-2.jpg" alt="mountains" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+                  
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-296">
+    <div class="container">
+        <div class="content">
+            <span class="topper">Our Services</span>
+            <h2 class="title">We Are Committed To Giving Your Child The Best Start to Coding</h2>
+            <p class="text">
+                At CodeCraft Academy, our mission is to educate the adolescents of our community about the fundamentals of computer science so they may later apply it later on. We make this accessible to anyonem, all you need is computer and wifi to join our classes!
+            </p>
+        </div>
+        <ul class="card-group">
+            <li class="item">
+                <a class="link" href="">
+                    <img class="icon" src="bracket.png" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                    <h3 class="h3">Basics of Python</h3>
+                    <p class="item-text">
+                        Python is an extremely versatile language that will defintely be a go-to way to perform tasks in the future, due to its simplicity.
+                    </p>
+                </a>
+                <picture class="image"  aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="code.jpg">
+                    <source media="(min-width: 601px)" srcset="code.jpg">
+                    <img loading="lazy" decoding="async" src="code.jpg" alt="library" width="413" height="266">
+                </picture>
+            </li>
+            <li class="item">
+                <a href="" class="link">
+                    <img class="icon" src="bracket.png" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                    <h3 class="h3">Trusted Tutors</h3>
+                    <p class="item-text">
+                        We have had almost 7+ years of experience with Python, having won numerous Hackathons. We are proficient with the basics of programming and logical thinking, and have used python in many ways!
+                    </p>
+                </a>
+                <picture class="image"  aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="code.jpg">
+                    <source media="(min-width: 601px)" srcset="code.jpg">
+                    <img loading="lazy" decoding="async" src="code.jpg" alt="library" width="413" height="266">
+                </picture>
+            </li>
+            <li class="item">
+                <a href="" class="link">
+                    <img class="icon" src="bracket.png" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                    <h3 class="h3">Adaptive</h3>
+                    <p class="item-text">
+                        All our classes are adaptive based on the students' needs, so you never need to worry about falling behind
+                    </p>
+                </a>
+                <picture class="image"  aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="code.jpg">
+                    <source media="(min-width: 601px)" srcset="code.jpg">
+                    <img loading="lazy" decoding="async" src="code.jpg" alt="library" width="413" height="266">
+                </picture>
+            </li>
+            <li class="item">
+                <a class="link" href="">
+                    <img class="icon" src="bracket.png" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                    <h3 class="h3">Videos on our Youtube Channel</h3>
+                    <p class="item-text">
+                        Never miss a lesson!
+                    </p>
+                </a>
+                <picture class="image">
+                    <source media="(max-width: 600px)" srcset="code.jpg">
+                    <source media="(min-width: 601px)" srcset="code.jpg">
+                    <img loading="lazy" decoding="async" src="code.jpg" alt="library" width="413" height="266" aria-hidden="true">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+
+<section id="cta-51">
+    <div class="container">
+        <div class="content">
+            <span class="topper">Register</span>
+            <h2 class="title">Enroll with us today!</h2>
+            <p class="text">
+                Trust us, we wont let you down.
+            </p>
+            <a href="registration.html" class="button-solid">Register Now</a>
+        </div>
+    </div>
+    <!-- Background Image-->
+    <picture class="picture">
+        <source media="(max-width: 600px)" srcset="code.jpg">
+        <source media="(min-width: 601px)" srcset="code.jpg">
+        <img loading="lazy" decoding="async" src="code.jpg" alt="cabinets" width="1920" height="1280" aria-hidden="true">
+    </picture>
+</section>
+                                
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-355">
+    <div class="container">
+        <div class="content">
+            <span class="topper">Testimonials</span>
+            <h2 class="title">Trusted by Many</h2>
+            <p class="text">
+                At CodeCraft Academy, let us guide your child to success in the field of computer science, with no cost from your end!
+            </p>
+        </div>
+        <ul class="card-group">
+            <li class="item">
+                <img class="quote" aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote-blue.svg" decoding="async" alt="quote icon" width="40" height="33">
+                <p class="review">
+                    CodeCraft Academy is an amazing way for my child to pursue his interests in computer science, and the exceptional tutors have guided him in every step of the way. Neev learned a lot from this class, and I defintely recommend it.
+                </p>
+                <span class="name">Deepalakshmi Srinivasan</span>
+                <span class="job">Mother of Neev Srinivasan</span>
+            </li>
+            <li class="item">
+                <img class="quote" aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote-blue.svg" decoding="async" alt="quote icon" width="40" height="33">
+                <p class="review">
+                    I have used CleanPro service for about four years. I describe myself very picky and difficult to be pleased. Exceeded my expectations.
+                </p>
+                <span class="name">Robert Henrich</span>
+                <span class="job">CEO, HK Traders</span>
+            </li>
+            <li class="item">
+                <img class="quote" aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote-blue.svg" decoding="async" alt="quote icon" width="40" height="33">
+                <p class="review">
+                    I have used CleanPro service for about four years. I describe myself very picky and difficult to be pleased. Exceeded my expectations.
+                </p>
+                <span class="name">Robert Henrich</span>
+                <span class="job">CEO, HK Traders</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Why Choose                  -->
+<!-- ============================================ -->
+
+<section id="why-choose-37">
+    <div class="container">
+        <!-- Right Image -->
+        <picture class="picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/lightbulb-m.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/lightbulb.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/lightbulb.jpg" alt="lightbulbs on a wire" width="858" height="781">
+        </picture>
+        <div class="content">
+            <span class="topper">Why Choose Us</span>
+            <h2 class="title">Et orci volutpat, back up generator installations</h2>
+            <p class="text">
+                Facilisis condimentum viverra scelerisque ac morbi sit sed. Turpis sagittis in blandit eleifend tortor ullamcorper eu placerat. Et orci felis volutpat, etiam vitae egestas volutpat pulvinar. 
+            </p>
+            <ul class="ul">
+                <li class="li">
+                    <img class="icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/yellow-check.svg" alt="checkmark" width="27" height="27">
+                    Clean Work
+                </li>
+                <li class="li">
+                    <img class="icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/yellow-check.svg" alt="checkmark" width="27" height="27">
+                    Attention To Detail
+                </li>
+                <li class="li">
+                    <img class="icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/yellow-check.svg" alt="checkmark" width="27" height="27">
+                    Punctual
+                </li>
+                <li class="li">
+                    <img class="icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/yellow-check.svg" alt="checkmark" width="27" height="27">
+                    Quality Guaranteed
+                </li>
+            </ul>
+            <a href="" class="button-solid">Request A Quote Today</a>
+        </div>
+    </div>
+</section>
+                                
+<!-- ============================================ -->
+<!--                   Stats                      -->
+<!-- ============================================ -->
+
+<!-- No headers, so no section tag -->
+<div id="stats-316">
+    <ul class="card-group">
+        <li class="item">
+            <picture class="picture">
+                <img class="icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/person-gold.svg" alt="icon" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="flex-group">
+                <span class="number">3</span>
+                <span class="desc">Trusted High Schoolers</span>
+            </div>
+        </li>
+        <li class="item">
+            <picture class="picture">
+                <img class="icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/group-gold.svg" alt="icon" width="40" height="35" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="flex-group">
+                <span class="number">50+</span>
+                <span class="desc">Global Customers</span>
+            </div>
+        </li>
+        <li class="item">
+            <picture class="picture">
+                <img class="icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/award-gold.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="flex-group">
+                <span class="number">7</span>
+                <span class="desc">Winning Awards</span>
+            </div>
+        </li>
+        <li class="item">
+            <picture class="picture">
+                <img class="icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/check-gold.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="flex-group">
+                <span class="number">98%</span>
+                <span class="desc">Success Rate</span>
+            </div>
+        </li>
+    </ul>
 </div>
-   
-   <div class = "text-box2">
-        <h1><span class = "Learns">Learn Coding</span>  <span class = "auto-type"></span></h1>
-
-   </div>
-   <div class = "signupwords">
-    <h2 class = "signupwords-writing">
-        In today's ever-evolving society, proficiency in computer programming is no longer just a valuable skill; it is a necessity. Python, as a versatile and user-friendly programming language, offers an exceptional foundation for your children to not only grasp the fundamentals of coding but also to develop problem-solving abilities, logical thinking, and creativity. Contact us below to have your child embark on their journey to becoming experienced programmers. Trust us, we won't let you down.
-    </h2>
-   </div>
-   
-   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-   <div class = "background-3">
-
-<div class="box">
-    <div class="why-us">
-        <h2>Why us?</h2>
-       </div>
-    
-       <div class = "why-us-desc">
-        <h1 class = "writing1">We may be new to your student, but we are not new to teaching</h1>
-        <h2 class = "writing2">We have held tutoring roles in orginizations like kumon teaching students from ages 5 all the way to ages 14</h2>
-        <h2 class = "writing2">We peer tutor students in our classes who are struggling, from math all the way to computer science</h2>
-        <h2 class = "writing2">We are trusted by our peers, our students, and our teachers to always strive for excellence </h2>
-    </div>
-    
-    
-        <div class = "our-experience">
-    
-            <h1 class = "writing1">Not only are we experienced and trustworthy tutors, we are also experienced programmers</h1>
-            <h2 class = "writing2">Each of the members on our team has over 7+ years of experience with python</h2>
-            <h2 class = "writing2">We are experienced in all aspects of the language, from simply writing it all the way to implementing advanced algorithms and using advanced frameworks like django</h2>
-            <h2 class = "writing2">We have won numerous awards at hackathons using our skills. From using python to create a fully functional graphing calculator, to webscraping thousands of websites to curate data- We have done it all</h2>
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+​
+<footer id="footer-269">
+    <div class="container">
+        <!-- Logo Group -->
+        <div class="logo-group">
+            <a aria-label="go back to home" class="logo" href="">
+                <img class="logo-img light" aria-hidden="true" loading="lazy" decoding="async" src="" alt="logo" width="240" height="32">
+            </a>
+            <p class="text">
+                Below are some of the links to contact us and view what we do. If you have any questions, please feel free to email us through our form. Click on the images to perform actions.
+            </p>
         </div>
+        <!-- Links -->
+        <ul class="nav">
+            <li class="nav-li">
+                <span class="header">Sitemap</span>
+            </li>
+            <li class="nav-li">
+                <a class="nav-link" href="">Home</a>
+            </li>
+            <li class="nav-li">
+                <a class="nav-link" href="">About</a>
+            </li>
+            <li class="nav-li">
+                <a class="nav-link" href="">Services</a>
+            </li>
+            <li class="nav-li">
+                <a class="nav-link" href="">Portfolio</a>
+            </li>
+            <li class="nav-li">
+                <a class="nav-link" href="">Contact</a>
+            </li>
+        </ul>
+        <!-- Contact Info -->
+        <ul class="contact">
+            <li class="nav-li">
+                <span class="header">Contact</span>
+            </li>
+            <li class="contact-li">
+                <a class="contact-link" href="tel: 123-456-7890">(123) 456-7890</a>
+            </li>
+            <li class="contact-li">
+                <a class="contact-link" href="mailto:info@codestitch.com">info@codestitch.com</a>
+            </li>
+            <!-- Social Media -->
+            <li class="contact-li social-group">
+                <div class="social">
+                    <a class="social-link" aria-label="visit google profile" href="">
+                        <img class="social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/google.svg" alt="google" width="11" height="11">
+                    </a>
+                    <a class="social-link" aria-label="visit facebook profile" href="">
+                        <img class="social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/Facebook.svg" alt="facebook" width="6" height="11">
+                    </a>
+                    <a class="social-link" aria-label="visit instagram profile" href="">
+                        <img class="social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/instagram.svg" alt="instagram" width="11" height="11">
+                    </a>
+                </div>
+            </li>
+        </ul>
     </div>
-   </div>
-   
-   <script>
-    var typed = new Typed(".auto-type", {
-        strings:["for free", "from experienced tutors", "from advanced programmers", "for fun"],
-        typeSpeed: 100,
-        backSpeed:200,
-        loop: true
-    })
-
-   </script>
-  
-</body>
-</html>
+</footer>
