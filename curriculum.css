@@ -1,4 +1,3 @@
-
 body {
   padding: 0;
   margin: 0;
@@ -727,226 +726,63 @@ body {
     margin:0;
     color:var(--bodyTextColor);
   }
-/*-- -------------------------- -->
-<---   Side By Side Reverse     -->
-<--- -------------------------- -*/
+        
+        
+        body {
+            background-color: #1c1c1c;
+            color: #e0e0e0;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding-top:10rem;
+        }
 
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #sbs-371 {
-        padding: var(--sectionPadding);
-        overflow: hidden;
-    }
-    @keyframes floatAnimation {
-        0% {
-            transform: translateY(0);
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 1200px;
         }
-        50% {
-            transform: translateY(-2em);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
-    @keyframes floatAnimation2 {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-1em);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
-    #sbs-371 .container {
-        width: 100%;
-        /* changes to 1280px at desktop */
-        max-width: 34.375rem;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        /* 48px - 56px */
-        gap: clamp(3rem, 3vw, 3.5rem);
-    }
-    #sbs-371 .content {
-        /* set text align to left if content needs to be left aligned */
-        text-align: left;
-        width: 100%;
-        max-width: 33.875rem;
-        display: flex;
-        flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
-        align-items: flex-start;
-    }
 
-    #sbs-371 .text {
-        margin-bottom: 1rem;
-    }
-    #sbs-371 .text:last-of-type {
-        margin-bottom: 2rem;
-    }
-    #sbs-371 .button-solid {
-        font-size: 1rem;
-        /* 46px - 56px */
-        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-        text-decoration: none;
-        font-weight: 700;
-        text-align: center;
-        box-shadow:yellowgreen;
-        margin: 0;
-        color: #fff;
-        min-width: 9.375rem;
-        padding: 0 1.5rem;
-        background-color: var(--primary);
-        border-radius: 0.25rem;
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-        /* prevents padding from adding to the width */
-        box-sizing: border-box;
-    }
-    #sbs-371 .button-solid:before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 0%;
-        background: yellowgreen;
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        border-radius: 0.25rem;
-        transition: width 0.3s;
-    }
-    #sbs-371 .button-solid:hover:before {
-        width: 100%;
-    }
-    #sbs-371 .image-group {
-        /* everything in the group is in ems so we can scale them down with this min/max font size tied to the view width */
-        font-size: min(2.3vw, 1em);
-        width: 36.1875em;
-        height: 36.75em;
-        position: relative;
-        /* sends it to the top above the content */
-        order: -1;
-    }
-    #sbs-371 .splash {
-        width: 35.625em;
-        height: 36.625em;
-        opacity: 0.1;
-        position: absolute;
-        left: 0.3125em;
-        top: 0;
-    }
-    #sbs-371 .blob {
-        width: 24.5em;
-        height: 31.0625em;
-        position: absolute;
-        right: 0em;
-        top: 0.625em;
-    }
-    #sbs-371 .lightning {
-        width: 4em;
-        height: 6.4375em;
-        position: absolute;
-        right: 2.5em;
-        top: 0.5em;
-        transform: rotate(23deg);
-    }
-    #sbs-371 .left-image {
-        width: 13.1875em;
-        height: 13.1875em;
-        border-radius: 50%;
-        /* cover the 1px gap between border and image */
-        background-color: #f7f7f7;
-        border: 12px solid #f7f7f7;
-        /* clips image to the circle */
-        overflow: hidden;
-        position: absolute;
-        left: -0.75em;
-        top: 8.1875em;
-        z-index: 10;
-        animation-name: floatAnimation2;
-        animation-duration: 6s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-    }
-    #sbs-371 .left-image img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        /* makes it act like a background image */
-        object-fit: cover;
-    }
-    #sbs-371 .bottom-image {
-        width: 11.25em;
-        height: 11.25em;
-        border-radius: 50%;
-        /* cover the 1px gap between border and image */
-        background-color: #f7f7f7;
-        border: 12px solid #f7f7f7;
-        /* clips image to the circle */
-        overflow: hidden;
-        position: absolute;
-        right: 11.25em;
-        bottom: -0.75em;
-        z-index: 10;
-        animation-name: floatAnimation;
-        animation-duration: 10s;
-        animation-delay: 1s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-    }
-    #sbs-371 .bottom-image img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        /* makes it act like a background image */
-        object-fit: cover;
-    }
-    #sbs-371 .person {
-        width: 24.125em;
-        height: auto;
-        position: absolute;
-        right: 2.875em;
-        bottom: 4.0625em;
-    }
-    #sbs-371 .person img {
-        width: 100%;
-        height: auto;
-    }
-    #sbs-371 .mask {
-        width: 23.9375em;
-        height: 10.8125em;
-        position: absolute;
-        right: -2.0625em;
-        bottom: 2.6875em;
-        z-index: 2;
-    }
-}
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #sbs-371 .container {
-        max-width: 80rem;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    #sbs-371 .ul {
-        margin-top: 1rem;
-    }
-    #sbs-371 .image-group {
-        font-size: min(1.1vw, 1em);
-        /* prevents flexbox from squishing it */
-        flex: none;
-    }
-}
+        .class {
+            background-color: #292929;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .class:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .class h2 {
+            color: #f39c12;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .concepts, .projects {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .concepts li, .projects li {
+            margin: 10px 0;
+            padding: 15px;
+            background-color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .concepts li:hover, .projects li:hover {
+            background-color: #444;
+        }
+
+        .section-title {
+            font-size: 22px;
+            margin: 25px 0 10px;
+            color: #f39c12;
+        }

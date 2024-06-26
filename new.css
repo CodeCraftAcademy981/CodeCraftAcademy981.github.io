@@ -698,7 +698,9 @@ root {
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
-
+.text{
+  color:aqua
+}
 body {
     margin: 0;
     padding: 0;
@@ -979,7 +981,7 @@ body {
 /* Desktop Parallax Effect - 1300px */
 @media only screen and (min-width: 81.25rem) {
     #hero-229 {
-        background: url("back-2.jpg");
+        background: url("coding.webp");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1116,68 +1118,7 @@ body {
         justify-content: center;
         align-items: center;
     }
-    #RPsbs-248 .lines,
-    #RPsbsr-248 .lines {
-        height: 100%;
-        width: 35%;
-        display: block;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: -1;
-    }
-    #RPsbs-248 .lines:before,
-    #RPsbsr-248 .lines:before {
-        /* Right Line */
-        content: "";
-        width: 1px;
-        height: 100%;
-        background: -moz-linear-gradient(
-            top,
-            rgba(250, 251, 252, 0.5) 0%,
-            rgba(250, 251, 252, 0) 100%
-        );
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(
-            top,
-            rgba(250, 251, 252, 0.5) 0%,
-            rgba(250, 251, 252, 0) 100%
-        );
-        /* Chrome10-25,Safari5.1-6 */
-        opacity: 1;
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        /* flips vertically */
-        transform: scaleY(-1);
-    }
-    #RPsbs-248 .lines:after,
-    #RPsbsr-248 .lines:after {
-        /* Right Line */
-        content: "";
-        width: 1px;
-        height: 100%;
-        background: -moz-linear-gradient(
-            top,
-            rgba(250, 251, 252, 0.5) 0%,
-            rgba(250, 251, 252, 0) 100%
-        );
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(
-            top,
-            rgba(250, 251, 252, 0.5) 0%,
-            rgba(250, 251, 252, 0) 100%
-        );
-        /* Chrome10-25,Safari5.1-6 */
-        opacity: 1;
-        position: absolute;
-        display: block;
-        top: 0;
-        right: 0;
-        /* flips vertically */
-        transform: scaleY(-1);
-    }
+    
     #RPsbs-248 .picture,
     #RPsbsr-248 .picture {
         /* 344px - 434px */
@@ -2067,8 +2008,11 @@ body {
     }
     #footer-269 .logo-group {
         /* takes up all the space, lets the other ul's wrap below it */
-        width: 100%;
-        color:white;
+        margin: 0 auto;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        display: block;
         position: relative;
     }
     #footer-269 .logo {
