@@ -33,6 +33,9 @@
         <hr>
         <!--Navigation List-->
         <nav class="nav" role="navigation">
+            <a href="" class="logo" aria-label="back to home">
+                <img src="logo.png" alt="logo" width="100" height="100" aria-hidden="true" decoding="async">
+            </a>
             <!--Mobile Nav Toggle-->
             <button class="toggle" aria-label="mobile menu toggle">
                 <div class="box" aria-hidden="true">
@@ -41,6 +44,7 @@
                     <span class="line line3" aria-hidden="true"></span>
                 </div>
             </button>
+            
             <!-- We need a wrapper div so we can set a fixed height on the ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
             <div class="ul-wrapper">
                 <ul id="expanded" class="ul" aria-expanded="false">
@@ -57,12 +61,12 @@
                     <!--Copy and paste this dropdown list item and replace any .li with this dropdown group to make a new dropdown and it will work-->
                     <li class="li dropdown" tabindex="0">
                         <span class="li-link">
-                            Classes
+                            Donate
                             <img class="drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
                         </span>
                         <ul class="drop-ul">
                             <li class="drop-li">
-                                <a href="https://classroom.google.com/c/NjIyMzA1NTM1OTAx?cjc=hltyhr5" class="li-link drop-link">Registration</a>
+                                <a href="https://hcb.hackclub.com/donations/start/codecraft-academy" class="li-link drop-link">Donate Page</a>
                             </li>
                             <li class="drop-li">
                                 <a href="curriculum.html" class="li-link drop-link">Our Curriculum</a>
@@ -128,9 +132,9 @@
 
     <!-- Background Image -->
     <picture class="picture">
-        <source media="(max-width: 600px)" srcset="coding.webp">
-        <source media="(min-width: 601px)" srcset="coding.webp">
-        <img loading="lazy" decoding="async" src="coding.webp" alt="mountains" width="2250" height="1500" aria-hidden="true">
+        <source media="(max-width: 600px)" srcset="hero.jpg">
+        <source media="(min-width: 601px)" srcset="hero.jpg">
+        <img loading="lazy" decoding="async" src="hero.jpg" alt="mountains" width="2250" height="1500" aria-hidden="true">
     </picture>
 </section>
                                 
@@ -142,26 +146,29 @@
     <div class="container">
         <!-- Left Image Section -->
         <picture class="picture">
-            <source media="(max-width: 900px)" srcset="firstclass.png">
-            <source media="(min-width: 601px)" srcset="firstclass.png">
-            <img loading="lazy" decoding="async" src="firstclass.png" alt="hiker" width="434" height="434" aria-hidden="true">
+            <source media="(max-width: 900px)" srcset="millikin.jpg">
+            <source media="(min-width: 601px)" srcset="millikin.jpg">
+            <img loading="lazy" decoding="async" src="millikin.jpg" alt="hiker" width="434" height="434" aria-hidden="true">
         </picture>
         <!-- Right Content Section-->
         <div class="content">
             <span class="topper">CodeCraft Academy</span>
-            <h2 class="title">Our Mission</h2>
+            <h2 class="title">Who are we?</h2>
             <p class="text">
-                In today's ever-evolving society, proficiency in computer programming is no longer just a valuable skill; it is a necessity. Python, as a versatile and user-friendly programming language, offers an exceptional foundation for young students to not only grasp the fundamentals of coding but also to develop problem-solving abilities, logical thinking, and creativity. Our mission is to provide computer science education for all students who aspire to learn, no matter their financial situation.
+                CodeCraft Academy is a non-profit organization created to provide the younger generation
+                with computer science knowledge so they may later apply it in their lives. Through teaching at
+                local public schools like Millikin Elementary School and hosting coding workshops in our local libraries, we have established a
+                foundation for our nonprofit organization. With over 3 different tracks for classes, we have taught a total of <strong>200</strong> students in the Bay Area how to write their first program.
             </p>
             <a class="button-solid" aria-label="learn more about our programs" href="curriculum.html">Learn More</a>
         </div>
     </div>
     <!-- Background Image -->
-    <picture class="background">
+    <!--<picture class="background">
         <source media="(max-width: 600px)" srcset="code.jpg">
         <source media="(min-width: 601px)" srcset="code.jpg">
         <img loading="lazy" decoding="async" src="code.jpg" alt="mountains" width="2250" height="1500" aria-hidden="true">
-    </picture>
+    </picture>-->
 </section>
                   
 <!-- ============================================ -->
@@ -171,19 +178,19 @@
 <section id="services-296">
     <div class="container">
         <div class="content">
-            <span class="topper">Our Services</span>
+            <span class="topper">Our Service</span>
             <h2 class="title">We Are Committed To Giving Children the Best Start at Coding</h2>
             <p class="text">
-                At CodeCraft Academy, our mission is to educate the adolescents of our community about the fundamentals of computer science so they may later apply it later on. We make this accessible to anyonem, all you need is computer and wifi to join our classes!
+                At CodeCraft Academy, our mission is to educate the adolescents of our community about the fundamentals of computer science so they may later apply it later on. We make this accessible to anyone.
             </p>
         </div>
         <ul class="card-group">
             <li class="item">
                 <a class="link" href="">
                     <img class="icon" src="bracket.png" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="h3">Basics of Python</h3>
+                    <h3 class="h3">In-Person</h3>
                     <p class="item-text">
-                        Python is an extremely versatile language that will defintely be a go-to way to perform tasks in the future, due to its simplicity.
+                        Taught 100 students aging from 8-13 years old in local elementary and middle schoolers.
                     </p>
                 </a>
                 <picture class="image"  aria-hidden="true">
@@ -195,9 +202,9 @@
             <li class="item">
                 <a href="" class="link">
                     <img class="icon" src="bracket.png" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="h3">Trusted Tutors</h3>
+                    <h3 class="h3">Online</h3>
                     <p class="item-text">
-                        We have had almost 7+ years of experience with Python, having won numerous Hackathons. We are proficient with the basics of programming and logical thinking, and have used python in many ways!
+                        Taught 50 students in our online classes aging from 6-13, taught Scratch and Python alternatively.
                     </p>
                 </a>
                 <picture class="image"  aria-hidden="true">
@@ -209,9 +216,9 @@
             <li class="item">
                 <a href="" class="link">
                     <img class="icon" src="bracket.png" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="h3">Adaptive</h3>
+                    <h3 class="h3">Events</h3>
                     <p class="item-text">
-                        All our classes are adaptive based on the students' needs, so you never need to worry about falling behind.
+                        Hosted workshops in our local libraries, encouraging students to write their first program.
                     </p>
                 </a>
                 <picture class="image"  aria-hidden="true">
@@ -223,9 +230,9 @@
             <li class="item">
                 <a class="link" href="">
                     <img class="icon" src="bracket.png" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="h3">Videos on our Youtube Channel</h3>
+                    <h3 class="h3">Hackathons</h3>
                     <p class="item-text">
-                        Never miss a lesson, or watch at your comfort!
+                        Currently working on hosting hackathons in local high schools for students to participate in for great prizes!
                     </p>
                 </a>
                 <picture class="image">
@@ -244,12 +251,12 @@
 <section id="cta-51">
     <div class="container">
         <div class="content">
-            <span class="topper">Register</span>
-            <h2 class="title">Enroll with us today!</h2>
+            <span class="topper">Want to contribute to our nonprofit??</span>
+            <h2 class="title">Donate today!</h2>
             <p class="text">
-                Trust us, we wont let you down.
+                All your donations are tax-deductible. 100% of the funds are used for the community!
             </p>
-            <a href="registration.html" class="button-solid">Register Now</a>
+            <a href="https://hcb.hackclub.com/donations/start/codecraft-academy" class="button-solid">Donate today!</a>
         </div>
     </div>
     <!-- Background Image-->
@@ -327,8 +334,8 @@
                 <img class="icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/group-gold.svg" alt="icon" width="40" height="35" loading="lazy" decoding="async" aria-hidden="true">
             </picture>
             <div class="flex-group">
-                <span class="number">50+</span>
-                <span class="desc">Global Customers</span>
+                <span class="number">200+</span>
+                <span class="desc">Students Taught</span>
             </div>
         </li>
         <li class="item">
@@ -336,8 +343,8 @@
                 <img class="icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/award-gold.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
             </picture>
             <div class="flex-group">
-                <span class="number">7</span>
-                <span class="desc">Winning Awards</span>
+                <span class="number">$1,200</span>
+                <span class="desc">USD Raised</span>
             </div>
         </li>
         <li class="item">
@@ -345,9 +352,29 @@
                 <img class="icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/check-gold.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
             </picture>
             <div class="flex-group">
-                <span class="number">98%</span>
-                <span class="desc">Success Rate</span>
+                <span class="number">3</span>
+                <span class="desc">Schools</span>
             </div>
         </li>
     </ul>
 </div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="logo">
+            <img src="logo.png" alt="CodeCraft Academy Logo">
+        </div>
+        <div class="footer-links">
+            <a href="https://discord.gg/yourdiscord" target="_blank">Discord</a>
+            <a href="https://instagram.com/yourinstagram" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/company/yourlinkedin" target="_blank">LinkedIn</a>
+        </div>
+        <div class="footer-text">
+            <p>© 2024 CodeCraft Academy. All rights reserved.</p>
+            <p>CodeCraft Academy and LG Hacks are fiscally sponsored by The Hack Foundation (d.b.a. Hack Club).</p>
+            <p>Nonprofit EIN: 81–2908499.</p>
+        </div>
+    </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

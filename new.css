@@ -95,8 +95,8 @@ body {
       z-index: 10;
     }
     #navigation .logo img {
-      width: 100%;
-      height: 100%;
+      width: 10%;
+      height: 10%;
       /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
       object-fit: contain;
     }
@@ -981,7 +981,7 @@ body {
 /* Desktop Parallax Effect - 1300px */
 @media only screen and (min-width: 81.25rem) {
     #hero-229 {
-        background: url("coding.webp");
+        background: url("hero.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1005,6 +1005,7 @@ body {
         padding: 0 1em;
         position: relative;
         z-index: 1;
+        background: rgba(9, 40, 1, 0.5); /* For a dark overlay */
     }
     #RPsbs-248 .container,
     #RPsbsr-248 .container {
@@ -1074,7 +1075,7 @@ body {
         position: absolute;
         height: 100%;
         width: 0%;
-        background: #000;
+        background: #228f06;
         opacity: 1;
         top: 0;
         left: 0;
@@ -1321,7 +1322,7 @@ body {
       position: relative;
   }
   #cta-51 .container {
-      width: 100%;
+      width: 70%;
       max-width: 80rem;
       margin: auto;
       display: flex;
@@ -1428,7 +1429,7 @@ body {
       padding-bottom:5rem;
   }
   #reviews-355 .container {
-      width: 100%;
+      width: 80%;
       max-width: 90rem;
       background-image:"background.jpg";
       margin: auto;
@@ -1536,7 +1537,7 @@ body {
         padding: var(--sectionPadding);
     }
     #services-296 .container {
-        width: 100%;
+        width: 80%;
         /* changes to 1440px on desktop */
         max-width: 43.75rem;
         margin: auto;
@@ -1696,7 +1697,7 @@ body {
         overflow: hidden;
     }
     #why-choose-37 .container {
-        width: 100%;
+        width: 70%;
         max-width: 80rem;
         color:white;
         margin: auto;
@@ -1709,7 +1710,7 @@ body {
     #why-choose-37 .content {
         /* set text align to left if content needs to be left aligned */
         text-align: left;
-        width: 100%;
+        width: 70%;
         max-width: 39.375rem;
         margin-right: auto;
         /* moved section padding to the .content so we can have the picture be full width on mobile without the padding preventing it from doing so */
@@ -1747,7 +1748,7 @@ body {
         font-size: var(--bodyFontSize);
         line-height: 1.5em;
         text-align: inherit;
-        width: 100%;
+        width: 70%;
         max-width: 40.625rem;
         margin: 0;
         color: var(--bodyTextColor);
@@ -1799,7 +1800,7 @@ body {
     #why-choose-37 .button-solid:before {
         content: "";
         position: absolute;
-        height: 100%;
+        height: 70%;
         width: 0%;
         background: #000;
         opacity: 1;
@@ -1810,7 +1811,7 @@ body {
         transition: width 0.3s;
     }
     #why-choose-37 .button-solid:hover:before {
-        width: 100%;
+        width: 70%;
     }
     #why-choose-37 .button-solid {
         /* button override */
@@ -1819,7 +1820,7 @@ body {
     #why-choose-37 .picture {
         display: block;
         position: relative;
-        width: 100%;
+        width: 70%;
         height: 18.75rem;
     }
     #why-choose-37 .picture img {
@@ -1981,199 +1982,34 @@ body {
         justify-content: space-evenly;
     }
 }
-/*-- -------------------------- -->
-<---          Footer            -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #footer-269 {
-        /* 60px - 100px top and bottom */
-        padding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-        background-color: #1a1a1a;
-        /* Navigation Links */
-        /* Contact Links */
-    }
-    #footer-269 .container {
-        width: 100%;
-        /* reset on tablet */
-        max-width: 34.375rem;
-        margin: auto;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        /* 68px - 100px */
-        column-gap: clamp(4.25rem, calc(10%), 6.25rem);
-    }
-    #footer-269 .logo-group {
-        /* takes up all the space, lets the other ul's wrap below it */
-        margin: 0 auto;
-        max-width: 100%;
-        width: auto;
-        height: auto;
-        display: block;
-        position: relative;
-    }
-    #footer-269 .logo {
-        /* 210px - 240px */
-        width: clamp(13.125rem, 8vw, 15rem);
-        height: auto;
-        display: block;
-        /* 28px - 44px */
-        margin-bottom: clamp(1.75rem, 4.17vw, 2.75rem);
-    }
-    #footer-269 .logo-img {
-        width: 100%;
-        height: auto;
-    }
-    #footer-269 .text {
-        /* 14px - 16px */
-        font-size: clamp(0.875rem, 2.5vw, 1rem);
-        line-height: 1.5em;
-        margin: 0;
-        margin-bottom: 2rem;
-        /* changes to 305px at desktop */
-        max-width: 33.75rem;
-        color: var(--bodyTextColorWhite);
-    }
-    #footer-269 .nav {
-        padding: 0;
-        margin: 0;
-        color:white;
-    }
-    #footer-269 .nav-li {
-        list-style: none;
-        line-height: 1.5em;
-        margin-bottom: 0.5rem;
-        color:white;
-    }
-    #footer-269 .nav-li:last-of-type {
-        margin-bottom: 0;
-    }
-    #footer-269 .header {
-        font-size: 1rem;
-        line-height: 1.5em;
-        font-weight: 700;
-        margin-bottom: 0.875rem;
-        color: var(--bodyTextColorWhite);
-        position: relative;
-        display: block;
-    }
-    #footer-269 .nav-link {
-        font-size: 1rem;
-        text-decoration: none;
-        line-height: 1.5em;
-        color: var(--bodyTextColorWhite);
-        position: relative;
-    }
-    #footer-269 .nav-link:before {
-        /* underline */
-        content: "";
-        width: 0%;
-        height: 0.125rem;
-        /* current color of the parent */
-        background: currentColor;
-        opacity: 1;
-        position: absolute;
-        display: block;
-        bottom: -0.125rem;
-        left: 0;
-        transition: width 0.3s;
-    }
-    #footer-269 .nav-link:hover:before {
-        width: 100%;
-    }
-    #footer-269 .contact {
-        margin: 0;
-        padding: 0;
-        width: auto;
-        display: flex;
-        flex-direction: column;
-        align-self: stretch;
-        color:white;
-    }
-    #footer-269 .contact-li {
-        list-style: none;
-        margin-bottom: 0rem;
-    }
-    #footer-269 .contact-li:last-of-type {
-        margin-bottom: 0;
-    }
-    #footer-269 .contact-link {
-        font-size: 1rem;
-        text-decoration: none;
-        line-height: 1.5em;
-        text-align: left;
-        color: var(--bodyTextColorWhite);
-        display: inline-block;
-    }
-    #footer-269 .contact-link:hover {
-        text-decoration: underline;
-    }
-    #footer-269 .address {
-        font-size: 1rem;
-        margin-bottom: 1.25rem;
-    }
-    #footer-269 .social-group {
-        /* pushes away from the other flex items */
-        margin-top: auto;
-        margin-left: auto;
-    }
-    #footer-269 .social {
-        display: inline-flex;
-        justify-content: flex-start;
-        gap: 0.75rem;
-    }
-    #footer-269 .social-link {
-        width: 1.5rem;
-        height: 1.5rem;
-        background-color: #4e4b66;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-        transition:
-            transform 0.3s,
-            background-color 0.3s;
-    }
-    #footer-269 .social-link:hover {
-        background-color: var(--primary);
-        transform: translateY(-0.1875rem);
-    }
-    #footer-269 .social-img {
-        height: 0.8125rem;
-        width: auto;
-        display: block;
-    }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #footer-269 .container {
-        max-width: 80rem;
-        row-gap: 0;
-    }
-    #footer-269 .logo-group {
-        width: auto;
-        /* pushes everything to the right of it as far as possible in a flexbox */
-        margin-right: auto;
-    }
-    #footer-269 .text {
-        width: 80%;
-        max-width: 19.0625rem;
-        margin: 0;
-    }
-    #footer-269 .nav,
-    #footer-269 .contact {
-        /* 8px - 12px */
-        margin-top: clamp(0.5rem, 1.2vw, 0.75rem);
-    }
+.footer {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color */
+  padding: 20px; /* Padding */
+  text-align: center; /* Center text */
 }
 
-                                
-                                
-                  
-                                
-                                                            
+.footer-content {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items */
+}
+
+.footer-links a {
+  color: #fff; /* White link color */
+  text-decoration: none; /* No underline */
+  margin: 0 15px; /* Horizontal spacing between links */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.logo img {
+  max-width: 100px; /* Adjust logo size */
+  margin-bottom: 15px; /* Space below logo */
+}
+
+.footer-text {
+  margin-top: 10px; /* Space above text */
+}

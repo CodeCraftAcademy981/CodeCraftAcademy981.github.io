@@ -95,8 +95,8 @@ body {
       z-index: 10;
     }
     #navigation .logo img {
-      width: 100%;
-      height: 100%;
+      width: 10%;
+      height: 10%;
       /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
       object-fit: contain;
     }
@@ -684,7 +684,7 @@ body {
         color:white;
     }
     #meet-us-1021 .container {
-        width: 100%;
+        width: 80%;
         max-width: 80rem;
         margin: auto;
         position: relative;
@@ -696,7 +696,7 @@ body {
         gap: clamp(3rem, 6vw, 4rem);
     }
     #meet-us-1021 .container {
-        width: 100%;
+        width: 80%;
         max-width: 80rem;
         margin: auto;
         display: flex;
@@ -828,9 +828,48 @@ body {
             transform 0.6s,
             opacity 0.3s;
     }
+    #meet-us-1021 .button-solid {
+      font-size: 1rem;
+      /* 46px - 56px */
+      line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      color: #fff;
+      min-width: 9.375rem;
+      padding: 0 1.5rem;
+      background-color: var(--primary);
+      border-radius: 0.25rem;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+  }
+  #meet-us-1021 .button-solid:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background: green;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 0.25rem;
+      transition: width 0.3s;
+  }
+  #meet-us-1021 .button-solid:hover:before {
+    width: 100%;
+}
+#meet-us-1021 .button-solid {
+    /* button override */
+    margin-top: 2rem;
+}
 }
 /* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
+@media only screen and (max-width: 48rem) {
     #meet-us-1021 .card-group {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -840,3 +879,68 @@ body {
         grid-column: span 4;
     }
 }
+/*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #gallery-1446 {
+      
+      padding: var(--sectionPadding);
+      padding-top:200px;
+      color:white;
+  }
+  #gallery-1446 .cs-container {
+      width: 70%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+      position: relative;
+  }
+  #gallery-1446 .cs-content {
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1.5rem;
+  }
+  #gallery-1446 .cs-title {
+      margin: 0;
+  }
+  #gallery-1446 .cs-gallery {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(19.0625rem, 1fr));
+      /* 16px - 20px */
+      gap: clamp(1rem, 1.5vw, 1.25rem);
+      position: relative;
+  }
+  #gallery-1446 .cs-image {
+      /* 260px - 360px */
+      min-height: clamp(16.25rem, 60vw, 20rem);
+      border-radius: 1rem;
+      /* clips the image corners */
+      overflow: hidden;
+      display: block;
+      position: relative;
+  }
+  #gallery-1446 .cs-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      /* makes it act like a background image */
+      object-fit: cover;
+  }
+}
+                              
